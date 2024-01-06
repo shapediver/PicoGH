@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">DebugR7</Configuration>
+    <Configurations>Debug;Release;DebugR7;DebugR8;ReleaseR7;ReleaseR8</Configurations>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <PlatformTarget Condition=" '$(PlatformTarget)' == '' ">AnyCPU</PlatformTarget>
+    <!--
+      Default inclusion of files
+      https://docs.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#enabledefaultitems
+    -->
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <BuildTimestamp>$([System.DateTime]::Now.ToString("o"))</BuildTimestamp>
+    <OutputPath>$(MSBuildThisFileDirectory)\bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <Import Project="BuildConfigurations.csproj" />
+  <!--
+    Auto-generated AssemblyInfo
+    https://docs.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#assembly-attribute-properties 
+  -->
+  <Import Project="CommonVersion.csproj" />
+  <PropertyGroup>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Version>$(SdVersionMajor).$(SdVersionMinor).$(SdVersionPatch)$(SdVersionSuffix)</Version>
+    <Authors>$(SdAuthors)</Authors>
+    <Company>$(SdCompany)</Company>
+    <CopyRight>$(SdCopyright)</CopyRight>
+    <Product>$(SdProduct)</Product>
+  </PropertyGroup>
+</Project>

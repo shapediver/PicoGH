@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Sdk Name="Microsoft.NET.Sdk" />
+  <Import Project="../CommonSettings.csproj" />
+  <PropertyGroup>
+    <ProjectGuid>{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PicoGK</RootNamespace>
+    <AssemblyName>PicoGK</AssemblyName>
+    <Description>The PicoGK geometry kernel</Description>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultItems>true</EnableDefaultItems>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>true</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>true</EnableDefaultNoneItems>
+    <LangVersion>12.0</LangVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <Import Project="../CommonSettingsFinal.csproj" />
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <ItemGroup>
+      <MySourceFiles Include="$(MSBuildThisFileDirectory)\PicoGKRuntimeBinaries\*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(MySourceFiles)" DestinationFolder="$(TargetDir)" />
+  </Target>
+  <ItemGroup>
+    <Reference Include="System.IO.Compression" />
+    <PackageReference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicoGK", "PicoGK\PicoGK.csproj", "{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugR7|Any CPU = DebugR7|Any CPU
+		DebugR8|Any CPU = DebugR8|Any CPU
+		ReleaseR7|Any CPU = ReleaseR7|Any CPU
+		ReleaseR8|Any CPU = ReleaseR8|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}.DebugR7|Any CPU.ActiveCfg = DebugR7|Any CPU
+		{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}.DebugR7|Any CPU.Build.0 = DebugR7|Any CPU
+		{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}.DebugR8|Any CPU.ActiveCfg = DebugR8|Any CPU
+		{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}.DebugR8|Any CPU.Build.0 = DebugR8|Any CPU
+		{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}.ReleaseR7|Any CPU.ActiveCfg = ReleaseR7|Any CPU
+		{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}.ReleaseR7|Any CPU.Build.0 = ReleaseR7|Any CPU
+		{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}.ReleaseR8|Any CPU.ActiveCfg = ReleaseR8|Any CPU
+		{53501741-D8C0-4E96-A3FB-34FB4CD74DBE}.ReleaseR8|Any CPU.Build.0 = ReleaseR8|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5112ED4-6739-4D4F-A5B3-5BF7DD7965F4}
+	EndGlobalSection
+EndGlobal
