@@ -12,6 +12,7 @@
     <EnableDefaultItems>false</EnableDefaultItems>
     <BuildTimestamp>$([System.DateTime]::Now.ToString("o"))</BuildTimestamp>
     <OutputPath>$(MSBuildThisFileDirectory)\bin\$(Configuration)\</OutputPath>
+    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
   <Import Project="BuildConfigurations.csproj" />
   <!--

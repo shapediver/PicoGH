@@ -3,11 +3,11 @@
   <Sdk Name="Microsoft.NET.Sdk" />
   <Import Project="../CommonSettings.csproj" />
   <PropertyGroup>
-    <ProjectGuid>{9E3597B5-345E-46FB-BEBE-AC93B385E5E9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PicoGKExamples</RootNamespace>
-    <AssemblyName>PicoGKExamples</AssemblyName>
-    <Description>Example project for PicoGK</Description>
+    <ProjectGuid>{470874FF-10BB-4D67-996D-2F7A59862D7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LatticeLibrary</RootNamespace>
+    <AssemblyName>LatticeLibrary</AssemblyName>
+    <Description>One of the most advanced libraries for creating lattice structures, based on ShapeKernel and PicoGK</Description>
     <!-- not available in language version 7.3
       <ImplicitUsings>enable</ImplicitUsings>
       <Nullable>enable</Nullable>
@@ -21,5 +21,6 @@
   <Import Project="../CommonSettingsFinal.csproj" />
   <ItemGroup>
     <ProjectReference Include="..\PicoGK\PicoGK.csproj" />
+    <ProjectReference Include="..\ShapeKernel\ShapeKernel.csproj" />
   </ItemGroup>
 </Project>

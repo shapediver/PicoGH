@@ -1,11 +1,20 @@
 ﻿
-try
+using System;
+
+class PicoGKExample
 {
-	PicoGK.Library.Go(0.5f, PicoGKExamples.BooleanShowCase.Task);
+    static void Main(string[] args)
+    {
+        try
+        {
+            PicoGK.Library.Go(0.5f, PicoGKExamples.BooleanShowCase.Task);
+        }
+
+        catch (Exception e)
+        {
+            // Apparently something went wrong, output here
+            Console.WriteLine(e);
+        }
+    }
 }
 
-catch (Exception e)
-{
-	// Apparently something went wrong, output here
-	Console.WriteLine(e);
-}

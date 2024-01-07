@@ -3,11 +3,11 @@
   <Sdk Name="Microsoft.NET.Sdk" />
   <Import Project="../CommonSettings.csproj" />
   <PropertyGroup>
-    <ProjectGuid>{9E3597B5-345E-46FB-BEBE-AC93B385E5E9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PicoGKExamples</RootNamespace>
-    <AssemblyName>PicoGKExamples</AssemblyName>
-    <Description>Example project for PicoGK</Description>
+    <ProjectGuid>{D9AF1393-FD53-4A78-9971-1A9BAD2CD20E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ShapeKernel</RootNamespace>
+    <AssemblyName>ShapeKernel</AssemblyName>
+    <Description>A base framework for creating computational geometry, based on PicoGK</Description>
     <!-- not available in language version 7.3
       <ImplicitUsings>enable</ImplicitUsings>
       <Nullable>enable</Nullable>
