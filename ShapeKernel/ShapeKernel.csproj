@@ -16,7 +16,6 @@
     <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
     <EnableDefaultEmbeddedResourceItems>true</EnableDefaultEmbeddedResourceItems>
     <EnableDefaultNoneItems>true</EnableDefaultNoneItems>
-    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <Import Project="../CommonSettingsFinal.csproj" />
   <ItemGroup>

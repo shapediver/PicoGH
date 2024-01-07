@@ -13,6 +13,7 @@
     <BuildTimestamp>$([System.DateTime]::Now.ToString("o"))</BuildTimestamp>
     <OutputPath>$(MSBuildThisFileDirectory)\bin\$(Configuration)\</OutputPath>
     <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <Import Project="BuildConfigurations.csproj" />
   <!--

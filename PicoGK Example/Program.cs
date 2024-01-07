@@ -7,7 +7,7 @@ class PicoGKExample
     {
         try
         {
-            PicoGK.Library.Go(0.5f, PicoGKExamples.BooleanShowCase.Task);
+            PicoGK.Library.Go(0.5f, PicoGKExamples.LoadDisplaySaveSTL.Task);
         }
 
         catch (Exception e)
