@@ -7,12 +7,12 @@
 [submodule "LEAP71_LatticeLibrary"]
 	path = LatticeLibrary/src
 	url = https://github.com/shapediver/LEAP71_LatticeLibrary.git
-[submodule "PicoGK/src"]
-	path = PicoGK/src
-	url = https://github.com/shapediver/PicoGK
-[submodule "ShapeKernel/src"]
-	path = ShapeKernel/src
+[submodule "PicoGK/PicoGK"]
+	path = PicoGK/PicoGK
+	url = https://github.com/shapediver/PicoGK.git
+[submodule "ShapeKernel/LEAP71_ShapeKernel"]
+	path = ShapeKernel/LEAP71_ShapeKernel
 	url = https://github.com/shapediver/LEAP71_ShapeKernel.git
-[submodule "LatticeLibrary/src"]
-	path = LatticeLibrary/src
+[submodule "LatticeLibrary/LEAP71_LatticeLibrary"]
+	path = LatticeLibrary/LEAP71_LatticeLibrary
 	url = https://github.com/shapediver/LEAP71_LatticeLibrary.git
