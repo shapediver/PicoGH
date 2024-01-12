@@ -2,7 +2,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">DebugR7</Configuration>
-    <Configurations>Debug;Release;DebugR7;DebugR8;ReleaseR7;ReleaseR8</Configurations>
+    <Configurations>DebugR7;DebugR8;ReleaseR7;ReleaseR8</Configurations>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <PlatformTarget Condition=" '$(PlatformTarget)' == '' ">AnyCPU</PlatformTarget>
     <!--

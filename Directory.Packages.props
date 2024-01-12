@@ -4,4 +4,12 @@
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     </PropertyGroup>
     <Import Project="$(MSBuildThisFileDirectory)\Packages.props" />
+    <!--
+        Rhino 7
+    -->
+    <Import Project="$(MSBuildThisFileDirectory)\PackagesRh7.props" Condition="$(Configuration.Contains('R7'))"/>
+    <!--
+        Rhino 8
+    -->
+    <Import Project="$(MSBuildThisFileDirectory)\PackagesRh8.props" Condition="$(Configuration.Contains('R8'))"/>
 </Project>

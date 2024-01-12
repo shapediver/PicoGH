@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Choose>
+    <When Condition="$(Configuration.Contains('R7'))">
+      <ItemGroup>
+     	<PackageReference Include="Grasshopper">
+		  <ExcludeAssets>runtime</ExcludeAssets>
+		</PackageReference>
+	  </ItemGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('R8'))">
+      <ItemGroup>
+     	<PackageReference Include="Grasshopper">
+		  <ExcludeAssets>runtime</ExcludeAssets>
+		</PackageReference>
+	  </ItemGroup>
+    </When>
+  </Choose>
+</Project>
