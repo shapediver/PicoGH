@@ -16,3 +16,6 @@
 [submodule "LatticeLibrary/LEAP71_LatticeLibrary"]
 	path = LatticeLibrary/LEAP71_LatticeLibrary
 	url = https://github.com/shapediver/LEAP71_LatticeLibrary.git
+[submodule "PicoGKRuntime/PicoGKRuntime"]
+	path = PicoGKRuntime
+	url = https://github.com/shapediver/PicoGKRuntime.git
