@@ -20,6 +20,9 @@ namespace PicoGH
         /// </summary>
         public override GH_LoadingInstruction PriorityLoad()
         {
+            //Instances.ComponentServer.AddCategoryIcon("PluginTemplate", ResourceLoader.LoadBitmap("PluginGrasshopper_16.png"));
+            //Instances.ComponentServer.AddCategorySymbolName("PluginTemplate", 'P');
+            
             try
             {
                 PicoGK.Library.Go(0.5f);

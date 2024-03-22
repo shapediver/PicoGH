@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Packages used by all projects depending on Rhino
+-->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Choose>
- 	<When Condition="$(Configuration.Contains('R7'))">
+    <When Condition="$(Configuration.Contains('R7'))">
       <ItemGroup>
-     	<PackageReference Include="RhinoCommon">
-		  <ExcludeAssets>runtime</ExcludeAssets>
-		</PackageReference>
-	  </ItemGroup>
-      <PropertyGroup Condition="Exists('$(ProgramW6432)\Rhino 7\System\Rhino.exe')">
+        <PackageReference Include="RhinoCommon" IncludeAssets="compile;build" />
+      </ItemGroup>
+      <PropertyGroup Condition="Exists('$(ProgramW6432)\Rhino 7\System\Rhino.exe') AND $([MSBuild]::IsOSPlatform(Windows))">
         <StartProgram>$(ProgramW6432)\Rhino 7\System\Rhino.exe</StartProgram>
         <StartArguments>
         </StartArguments>
@@ -21,11 +22,9 @@
     </When>
     <When Condition="$(Configuration.Contains('R8'))">
       <ItemGroup>
-     	<PackageReference Include="RhinoCommon">
-		  <ExcludeAssets>runtime</ExcludeAssets>
-		</PackageReference>
-	  </ItemGroup>
-      <PropertyGroup Condition="Exists('$(ProgramW6432)\Rhino 8\System\Rhino.exe')">
+        <PackageReference Include="RhinoCommon" IncludeAssets="compile;build" />
+      </ItemGroup>
+      <PropertyGroup Condition="Exists('$(ProgramW6432)\Rhino 8\System\Rhino.exe') AND $([MSBuild]::IsOSPlatform(Windows))">
         <StartProgram>$(ProgramW6432)\Rhino 8\System\Rhino.exe</StartProgram>
         <StartArguments>
         </StartArguments>

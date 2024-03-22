@@ -1,23 +1,14 @@
-﻿using System;
+﻿using Grasshopper;
+using Grasshopper.Kernel;
+using System;
 using System.Drawing;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Grasshopper.Kernel;
 
 namespace PicoGH
 {
-    public class PicoGHInfo : GH_AssemblyInfo
+    public class PluginInfo : GH_AssemblyInfo
     {
-        public override Bitmap Icon
-        {
-            get
-            {
-                return Properties.Resources.sd_icon_24x24;
-            }
-        }
-
-        public override Bitmap AssemblyIcon => Icon;
-
         public override string Name
         {
             get
@@ -26,7 +17,9 @@ namespace PicoGH
             }
         }
 
-        public override string AssemblyName => Name;
+        public override Bitmap Icon => ResourceLoader.LoadBitmap("PluginGrasshopper_24.png");
+
+        public override Bitmap AssemblyIcon => Icon;
 
         public override string Description
         {
@@ -36,7 +29,7 @@ namespace PicoGH
                 var configuration = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyConfigurationAttribute>().Configuration;
                 if (configuration.ToLowerInvariant().Contains("debug"))
                 {
-                    description = $"{description} ({configuration})";
+                    description = $"{description}, {Version} ({configuration})";
                 }
                 return description;
             }
@@ -56,7 +49,21 @@ namespace PicoGH
         {
             get
             {
-                return Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyCompanyAttribute>().Company;
+                var company = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyCompanyAttribute>().Company;
+
+                var attributes = Assembly.GetExecutingAssembly().GetCustomAttributes<AssemblyMetadataAttribute>();
+                if (attributes != null)
+                {
+                    foreach (var attribute in attributes)
+                    {
+                        if (attribute.Key == "Authors")
+                        {
+                            return $"{attribute.Value}, {company}";
+                        }
+                    }
+                }
+
+                return company;
             }
         }
 
@@ -64,7 +71,18 @@ namespace PicoGH
         {
             get
             {
-                return "contact@shapediver.com";
+                var attributes = Assembly.GetExecutingAssembly().GetCustomAttributes<AssemblyMetadataAttribute>();
+                if (attributes != null)
+                {
+                    foreach (var attribute in attributes)
+                    {
+                        if (attribute.Key == "AuthorContact")
+                        {
+                            return attribute.Value;
+                        }
+                    }
+                }
+                return "";
             }
         }
 
